@@ -19,40 +19,37 @@
         const word2 = "Вася"
         const word2Translation = "Vasia";
 
-        const wordsCount = 3;
+        const wordsCount = 3;//кількість слів
 
         let userAnswer = 0; //правильні відповіді
 
-        const minPercent = 50;//мін. відсоток
-        const ansversPercent = userAnswer / wordsCount * 100;
+        const minPercent = 50;//мінімальний відсоток
+        const maxPercent = 100;
 
         const final1 = "файна робота";
         const final2 = "постарайся ше"; //фінальні повідомлення
 
-        const userAnswer0 = prompt(word0);
+        let userAnswer0 = prompt(word0);
         if (userAnswer0 === word0Translation) {
-            userAnswer = wordsCount + 1;
+            userAnswer = userAnswer + 1;
         }
 
-        const userAnswer1 = prompt(word1);
+        let userAnswer1 = prompt(word1);
          if (userAnswer1 === word1Translation) {
-            userAnswer = wordsCount + 1;
+            userAnswer = userAnswer + 1;
         }
 
-        const userAnswer2 = prompt(word2);
+        let userAnswer2 = prompt(word2);
         if (userAnswer2 === word2Translation) {
-            userAnswer = wordsCount + 1;
+            userAnswer = userAnswer + 1;
         }
 
 
-        if (ansversPercent > minPercent) {
+        if (userAnswer / wordsCount * 100 > minPercent) {
             alert(final1);
         } else {
             alert(final2);
         }
-        
-
-
     </script>
 </body>
 </html>
